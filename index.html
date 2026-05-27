@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewel Memories - 石言葉</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="page">
+    <div class="app">
+
+      <section id="startScreen" class="screen is-active">
+        <img class="logo" src="assets/images/logo.png" alt="Jewel Memories">
+
+        <p class="lead">
+          今のあなたに、<br>
+          そっと合う石言葉を。<br><br>
+          いくつかの光を選びながら、<br>
+          あなたに届く言葉を見つけます。
+        </p>
+
+        <button id="startButton" class="button start-button" type="button">
+          はじめる
+        </button>
+      </section>
+
+      <section id="questionScreen" class="screen">
+        <div id="questionCount" class="question-count"></div>
+        <h1 id="questionTitle" class="question-title"></h1>
+        <div id="answers" class="answers"></div>
+      </section>
+
+      <section id="resultScreen" class="screen">
+        <h1 id="resultWord" class="result-word"></h1>
+
+        <img id="resultImage" class="character-image" src="" alt="">
+        <div id="resultName" class="character-name"></div>
+
+        <div class="message-card">
+          <p id="resultMessage" class="message"></p>
+        </div>
+
+        <div class="goods-area">
+          <p class="goods-copy">
+            この言葉を、<br>
+            いつでも思い出せるように。
+          </p>
+          <a id="goodsButton" class="button goods-button" href="#" target="_blank" rel="noopener">
+            この言葉のグッズを見る
+          </a>
+        </div>
+
+        <div class="other-title">
+          他のジュエルメモリー
+        </div>
+
+        <div id="otherList" class="other-list"></div>
+
+        <button id="resetButton" class="reset-button" type="button">
+          もう一度選ぶ
+        </button>
+
+        <div class="footer-links">
+          <div class="footer-title">Jewel Memoriesをもっと見る</div>
+          <div class="footer-link-list">
+            <a href="https://note.com/fragrant_witch" target="_blank" rel="noopener">note</a>
+            <a href="https://x.com/fragrant_witch" target="_blank" rel="noopener">X</a>
+            <a href="https://suzuri.jp/Sumine_Belltan" target="_blank" rel="noopener">Shop</a>
+            <a href="https://store.line.me/stickershop/product/30544659/ja" target="_blank" rel="noopener">LINEスタンプ</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
