@@ -233,7 +233,7 @@ body::after {
 
 .other-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
 
@@ -589,5 +589,30 @@ body::after {
     transform: none;
     filter: none;
     animation: none;
+  }
+}
+
+
+/* v10 five character layout */
+.other-card {
+  min-width: 0;
+}
+
+.other-card span {
+  font-size: 10px;
+}
+
+@media (max-width: 380px) {
+  .other-list {
+    gap: 6px;
+  }
+
+  .other-card {
+    border-radius: 14px;
+    padding: 6px 4px 8px;
+  }
+
+  .other-card span {
+    font-size: 9px;
   }
 }
