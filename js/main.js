@@ -3,6 +3,7 @@ const results = {
     word: "成功",
     name: "オニキス",
     image: "assets/images/characters/onyx.png",
+    noteUrl: "https://note.com/fragrant_witch/n/ncf635f9f2bda",
     goodsUrl: "https://suzuri.jp/Sumine_Belltan/18676031/acrylic-keychain/50x50mm/clear?utm_source=others&utm_medium=social&utm_campaign=item_detail_share",
     message: "本物の「成功」は、<br>「失敗」を経験してはじめて見えてくるもの。<br><br>失敗を恐れず、<br>チャレンジする気持ちを忘れずに進んでいけば、<br>物事はいずれ、あなたらしい形で達成されていきます。<br><br>まずはやってみること。<br><br>その一歩が、<br>あなたらしさを掴むきっかけになるでしょう。"
   },
@@ -10,6 +11,7 @@ const results = {
     word: "希望",
     name: "エメラルド",
     image: "assets/images/characters/emerald.png",
+    noteUrl: "",
     goodsUrl: "https://suzuri.jp/Sumine_Belltan/20059319/acrylic-keychain/50x50mm/clear?utm_source=others&utm_medium=social&utm_campaign=item_detail_share",
     message: "「希望」と「期待」は、<br>とてもよく似ています。<br><br>けれど希望とは、<br>未来の幸せを先取りすることではありません。<br><br>今この瞬間を使って、<br>未来へ繋がるビジョンを<br>少しずつ形にしていくこと。<br><br>今がなければ、<br>未来はありません。<br><br>現在で得られる小さな幸せを<br>ひとつずつ実感し続けるからこそ、<br>希望へ続く橋を架けることができます。<br><br>希望とは、<br>今を作る先に<br>結果として生まれる夢なのです。"
   },
@@ -17,6 +19,7 @@ const results = {
     word: "直感",
     name: "アメジスト",
     image: "assets/images/characters/amethyst.png",
+    noteUrl: "",
     goodsUrl: "https://suzuri.jp/Sumine_Belltan/20059337/acrylic-keychain/50x50mm/clear?utm_source=others&utm_medium=social&utm_campaign=item_detail_share",
     message: "「直感」とは、<br>現実を飛び越えて答えを知る力ではありません。<br><br>心が感じ取ったものを、<br>今ある現実と照らし合わせながら、<br>自分の中で再構築していく感覚です。<br><br>感じたままに進むだけでは、<br>足元を見失ってしまうことがあります。<br><br>けれど現実だけを見つめすぎれば、<br>心が本当に望んでいる道を<br>見逃してしまうこともあるでしょう。<br><br>大切なのは、<br>直感をそのまま答えにすることではなく、<br>現実の中で扱える形へと整えていくこと。<br><br>あなたの直感は、<br>逃げ道ではなく、<br>進む道を作るための光なのです。"
   },
@@ -24,6 +27,7 @@ const results = {
     word: "純潔",
     name: "ダイヤモンド",
     image: "assets/images/characters/diamond.png",
+    noteUrl: "https://note.com/fragrant_witch/n/n4a9da13f74b2",
     goodsUrl: "https://suzuri.jp/Sumine_Belltan/18686423/acrylic-keychain/50x50mm/clear?utm_source=others&utm_medium=social&utm_campaign=item_detail_share",
     message: "人は時に、<br>他人との心の境界線に恐れを抱きます。<br><br>誰かが気にしないことを、<br>あなたは気にしてしまうかもしれない。<br><br>けれど、その「純潔」を責める必要はありません。<br><br>潔癖とは、<br>他人と分かり合えないことではなく、<br>自分らしさと他人の価値観を<br>しっかり区別できる感覚でもあります。<br><br>自分は自分の意思を持ち、<br>他人は他人の意思を持つ。<br><br>それを認められた時、<br>お互いを否定せずにいられる心が<br>少しずつ育っていきます。<br><br>あなたは、あなたのままでいい。<br><br>大切なのは、<br>その透明な価値観との付き合い方を<br>少しずつ覚えていくことです。"
   },
@@ -31,6 +35,7 @@ const results = {
     word: "愛情",
     name: "リリム",
     image: "assets/images/characters/lilim.png",
+    noteUrl: "",
     goodsUrl: "https://suzuri.jp/Sumine_Belltan/20084759/acrylic-keychain/50x50mm/clear?utm_source=others&utm_medium=social&utm_campaign=item_detail_share",
     message: "「愛情」とは、<br>相手を思い通りにコントロールすることではありません。<br><br>好きだからこそ、<br>近づきたい。<br>分かってほしい。<br>自分だけを見てほしい。<br><br>そんな気持ちが生まれることもあるでしょう。<br><br>けれど、あなたが本当に愛しているのは、<br>目の前にいる相手でしょうか。<br><br>それとも、<br>自分の理想を被せた相手でしょうか。<br><br>愛は、相手を縛るほど強くなるものではありません。<br><br>相手の意思を認め、<br>自分の願いとも向き合えた時、<br>その想いは少しずつ、<br>支配ではなく愛情へと変わっていきます。"
   }
@@ -191,6 +196,18 @@ function showResult(type) {
   document.getElementById("resultImage").alt = data.name;
   document.getElementById("resultName").textContent = data.name;
   document.getElementById("resultMessage").innerHTML = data.message;
+
+  const noteArea = document.getElementById("noteArea");
+  const noteButton = document.getElementById("noteButton");
+
+  if (data.noteUrl) {
+    noteArea.classList.remove("is-hidden");
+    noteButton.href = data.noteUrl;
+    noteButton.textContent = "この言葉をもっと読む";
+  } else {
+    noteArea.classList.add("is-hidden");
+    noteButton.href = "#";
+  }
 
   const goodsButton = document.getElementById("goodsButton");
   goodsButton.href = data.goodsUrl;

@@ -474,6 +474,7 @@ body::after {
 
   .button:hover,
   .answer-button:hover,
+  .note-button:hover,
   .footer-link-list a:hover {
     transform: translateY(-2px);
     background: rgba(255,255,255,.9);
@@ -487,6 +488,7 @@ body::after {
 #resultScreen.result-prep .character-image,
 #resultScreen.result-prep .character-name,
 #resultScreen.result-prep .message-card,
+#resultScreen.result-prep .note-area,
 #resultScreen.result-prep .goods-area,
 #resultScreen.result-prep .other-title,
 #resultScreen.result-prep .other-list,
@@ -502,6 +504,7 @@ body::after {
 #resultScreen.result-animate .character-image,
 #resultScreen.result-animate .character-name,
 #resultScreen.result-animate .message-card,
+#resultScreen.result-animate .note-area,
 #resultScreen.result-animate .goods-area,
 #resultScreen.result-animate .other-title,
 #resultScreen.result-animate .other-list,
@@ -529,24 +532,28 @@ body::after {
   animation-delay: .92s;
 }
 
+#resultScreen.result-animate .note-area {
+  animation-delay: 1.16s;
+}
+
 #resultScreen.result-animate .goods-area {
-  animation-delay: 1.22s;
+  animation-delay: 1.36s;
 }
 
 #resultScreen.result-animate .other-title {
-  animation-delay: 1.48s;
+  animation-delay: 1.62s;
 }
 
 #resultScreen.result-animate .other-list {
-  animation-delay: 1.6s;
+  animation-delay: 1.74s;
 }
 
 #resultScreen.result-animate .reset-button {
-  animation-delay: 1.78s;
+  animation-delay: 1.92s;
 }
 
 #resultScreen.result-animate .footer-links {
-  animation-delay: 1.95s;
+  animation-delay: 2.1s;
 }
 
 @keyframes resultFadeUpV7 {
@@ -580,6 +587,7 @@ body::after {
   #resultScreen.result-animate .character-image,
   #resultScreen.result-animate .character-name,
   #resultScreen.result-animate .message-card,
+  #resultScreen.result-animate .note-area,
   #resultScreen.result-animate .goods-area,
   #resultScreen.result-animate .other-title,
   #resultScreen.result-animate .other-list,
@@ -615,4 +623,40 @@ body::after {
   .other-card span {
     font-size: 9px;
   }
+}
+
+
+.service-name {
+  display: inline-block;
+  color: #8a6d3a;
+  font-size: 14px;
+  letter-spacing: .06em;
+}
+
+
+.note-area {
+  margin-top: 28px;
+}
+
+.note-button {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid rgba(217, 193, 132, .32);
+  border-radius: 999px;
+  background: rgba(255,255,255,.54);
+  color: #7d6848;
+  font-size: 13px;
+  line-height: 1.4;
+  text-decoration: none;
+  letter-spacing: .04em;
+  box-shadow: 0 10px 26px rgba(160, 128, 58, 0.06);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.note-button:active {
+  transform: scale(.98);
+}
+
+.note-area.is-hidden {
+  display: none;
 }
